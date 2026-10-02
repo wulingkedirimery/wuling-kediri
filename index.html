@@ -53,11 +53,11 @@
     <header class="fixed top-0 w-full z-50 glass-nav shadow-sm border-b border-gray-200 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo Wuling (Pojok Kiri Atas) dari Folder Image -->
+                <!-- Logo Wuling (Pojok Kiri Atas) dari Folder Images -->
                 <a href="#" class="flex items-center gap-3">
                     <img src="images/logo2.png" alt="Logo Wuling Kediri" class="h-12 w-auto object-contain">
                     <div>
-                            <div class="text-[11px] text-gray-800 font-bold tracking-widest uppercase mt-0.5">
+                        <div class="text-[11px] text-gray-800 font-bold tracking-widest uppercase mt-0.5">
                             Kediri <span class="text-wuling-accent font-bold">| Mery Sales Executive </span>
                         </div>
                     </div>
@@ -72,11 +72,11 @@
     </header>
 
     <!-- Hero Section -->
-<section id="beranda" class="pt-24 pb-12 lg:pt-28 lg:pb-16 hero-bg overflow-hidden relative">
-    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#1E3A8A 1px, transparent 1px); background-size: 30px 30px;"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+    <section id="beranda" class="pt-24 pb-12 lg:pt-28 lg:pb-16 hero-bg overflow-hidden relative">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#1E3A8A 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                 
                 <!-- Text Content -->
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
@@ -184,7 +184,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <!-- Logo Wuling (Bagian Paling Bawah / Footer) dari Folder Image -->
+                    <!-- Logo Wuling (Bagian Paling Bawah / Footer) dari Folder Images -->
                     <div class="flex items-center gap-3 mb-4">
                         <img src="images/logo2.png" alt="Logo Wuling Kediri" class="h-12 w-auto object-contain brightness-0 invert">
                         <span class="text-white text-xl font-black tracking-wider uppercase">KEDIRI</span>
@@ -264,6 +264,10 @@
                     <h4 class="font-bold text-wuling-primary text-sm mb-3 flex items-center gap-2">
                         <i class="fas fa-calculator text-wuling-accent"></i> Simulasi Cicilan / Kredit (DP Minimal 30%):
                     </h4>
+                    
+                    <!-- Wadah Tombol Pilihan Varian / Tipe -->
+                    <div id="variantContainer" class="flex gap-2 overflow-x-auto pb-2 mb-4"></div>
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-xs font-semibold text-gray-700 mb-1">Estimasi Harga OTR (Rp):</label>
@@ -310,27 +314,35 @@
         const carData = [
             {
                 id: 'cloud-ev',
-                name: 'Wuling Cloud EV',
+                name: 'Wuling New Cloud EV',
                 category: 'EV',
-                priceNumber: 398000000,
-                priceDisplay: 'Rp 398 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/13831524513049172722_0',
-                desc: 'Hatchback listrik premium dengan kenyamanan tingkat tinggi dan teknologi pintar terdepan. Desain eksterior layaknya awan yang aerodinamis.',
+                priceNumber: 307000000,
+                priceDisplay: 'Rp 307.000.000 - Rp 347.000.000',
+                image: 'images/cloud-ev.png',
+                desc: 'Hatchback listrik premium dengan kenyamanan tingkat tinggi dan teknologi pintar terdepan.',
+                variants: [
+                    { name: 'Cloud EV Lite 360', priceNumber: 307000000, priceDisplay: 'Rp 307.000.000' },
+                    { name: 'Cloud EV Pro 360', priceNumber: 347000000, priceDisplay: 'Rp 347.000.000' }
+                ],
                 specs: [
-                    'Kapasitas Baterai: 50.6 kWh',
-                    'Jarak Tempuh: 460 KM (CLTC)',
+                    'Kapasitas Baterai: 37.9 kWh / 50.6 kWh',
+                    'Jarak Tempuh: 360 KM / 460 KM (CLTC)',
                     'Layar Utama: 15.6" Intelligent Head Unit',
                     'Garansi: Lifetime Core EV Components'
                 ]
             },
             {
                 id: 'binguo-ev',
-                name: 'Wuling New BinguoEV',
+                name: 'Wuling New Binguo EV',
                 category: 'EV',
-                priceNumber: 289000000,
-                priceDisplay: 'Rp 289 Juta - Rp 319 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/9364714772194896068_0',
+                priceNumber: 298000000,
+                priceDisplay: 'Rp 298.000.000 - Rp 329.000.000',
+                image: 'images/binguo-ev.png',
                 desc: 'Mobil listrik bergaya retro klasik yang ikonik, kabin lega untuk kelasnya, dan sangat efisien untuk mobilitas harian di perkotaan.',
+		variants: [
+                    { name: 'Binguo EV Lite', priceNumber: 298000000, priceDisplay: 'Rp 298.000.000' },
+                    { name: 'Binguo EV Pro', priceNumber: 329000000, priceDisplay: 'Rp 329.000.000' }
+                ],
                 specs: [
                     'Jarak Tempuh: 333 KM & 410 KM',
                     'Kapasitas Baterai: 31.9 kWh & 37.9 kWh',
@@ -340,12 +352,16 @@
             },
             {
                 id: 'air-ev',
-                name: 'Wuling New Air ev',
+                name: 'Wuling New Aira EV',
                 category: 'EV',
-                priceNumber: 214000000,
-                priceDisplay: 'Rp 214 Juta - Rp 307,5 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/17782063097240108377_0',
+                priceNumber: 162000000,
+                priceDisplay: 'Rp 162.000.000 - Rp 181.000.000',
+                image: 'images/air-ev.png',
                 desc: 'Smart Urban EV terpopuler. Lincah, ringkas, mudah parkir, dan sangat praktis di-charge langsung di colokan rumah biasa.',
+                variants: [
+                    { name: 'Aira EV 200', priceNumber: 162000000, priceDisplay: 'Rp 162.000.000' },
+                    { name: 'Aira EV 300', priceNumber: 181000000, priceDisplay: 'Rp 181.000.000' }
+                ],
                 specs: [
                     'Jarak Tempuh: 200 KM (Standard) / 300 KM (Long Range)',
                     'Pengisian: Easy Home Charging System',
@@ -354,13 +370,37 @@
                 ]
             },
             {
-                id: 'eksion-ev',
-                name: 'Wuling Eksion',
+                id: 'darion-ev',
+                name: 'Wuling New Darion EV',
                 category: 'EV',
-                priceNumber: 350000000,
-                priceDisplay: 'Hubungi Mery*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/13831524513049172722_0',
+                priceNumber: 396800000,
+                priceDisplay: 'Rp 396.800.000 - Rp 466.800.000',
+                image: 'images/EksionPHEV.png',
                 desc: 'Inovasi kendaraan elektrifikasi modern terbaru dari Wuling untuk mendukung mobilitas ramah lingkungan yang tangguh.',
+                variants: [
+                    { name: 'Darion EV CE 480', priceNumber: 396800000, priceDisplay: 'Rp 396.800.000' },
+                    { name: 'Darion EV CE 540', priceNumber: 406800000, priceDisplay: 'Rp 406.800.000' },
+		    { name: 'Darion EV EX 540', priceNumber: 406800000, priceDisplay: 'Rp 466.800.000' }
+                ],
+                specs: [
+                    'Teknologi: Advanced EV / PHEV Platform',
+                    'Kabin: Premium & Future-ready Interior',
+                    'Fitur Pintar: Connected Car Ecosystem',
+                    'Keamanan: Comprehensive Active Safety'
+                ]
+            },
+            {
+                id: 'eksion-ev',
+                name: 'Wuling Eksion EV',
+                category: 'EV',
+                priceNumber: 405000000,
+                priceDisplay: 'Rp 405.000.000 - Rp 476.000.000',
+                image: 'images/EksionPHEV2.png',
+                desc: 'Inovasi kendaraan elektrifikasi modern terbaru dari Wuling untuk mendukung mobilitas ramah lingkungan yang tangguh.',
+                variants: [
+                    { name: 'Eksion EV CE', priceNumber: 405000000, priceDisplay: 'Rp 405.000.000' },
+                    { name: 'Eksion EV EX', priceNumber: 476000000, priceDisplay: 'Rp 476.000.000' }
+                ],
                 specs: [
                     'Teknologi: Advanced EV / PHEV Platform',
                     'Kabin: Premium & Future-ready Interior',
@@ -370,12 +410,16 @@
             },
             {
                 id: 'almaz-rs-hybrid',
-                name: 'Wuling Almaz RS & Hybrid',
+                name: 'Wuling New Almaz 7 Seat',
                 category: 'SUV',
-                priceNumber: 385000000,
-                priceDisplay: 'Mulai Rp 385 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/8343422449682950767_0',
+                priceNumber: 410300000,
+                priceDisplay: 'Rp 410.300.000 - Rp 450.300.000',
+                image: 'images/almaz-rs.png',
                 desc: 'Intelligent Digital Car. Flagship SUV tangguh dengan opsi mesin Turbo atau Hybrid, dilengkapi fitur keselamatan ADAS terlengkap.',
+                variants: [
+                    { name: 'Almaz RS Pro CVT', priceNumber: 410300000, priceDisplay: 'Rp 410.300.000' },
+                    { name: 'Almaz RS Hybrid CVT', priceNumber: 450300000, priceDisplay: 'Rp 450.300.000' }
+                ],
                 specs: [
                     'Mesin: 1.5L Turbo / 2.0L Dedicated Hybrid',
                     'Kapasitas: 7 Seater Ekstra Luas',
@@ -387,10 +431,15 @@
                 id: 'alvez',
                 name: 'Wuling New Alvez',
                 category: 'SUV',
-                priceNumber: 217000000,
-                priceDisplay: 'Rp 217 Juta - Rp 303 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/10958014753372660416_0',
+                priceNumber: 222000000,
+                priceDisplay: 'Rp 222.500.000 - Rp 308.500.000',
+                image: 'images/alvez.png',
                 desc: 'Style and Innovation in One SUV. Compact SUV stylish untuk jiwa muda dengan desain Dual Tone yang memikat dan fitur kekinian.',
+                variants: [
+                    { name: 'Alvez CE M/T', priceNumber: 222500000, priceDisplay: 'Rp 222.500.000' },
+                    { name: 'Alvez CE A/T', priceNumber: 268500000, priceDisplay: 'Rp 268.500.000' },
+		    { name: 'Alvez EX A/T', priceNumber: 308500000, priceDisplay: 'Rp 308.500.000' }
+                ],
                 specs: [
                     'Mesin: 1.5L DOHC DVVT',
                     'Kapasitas: 5 Seater',
@@ -400,12 +449,35 @@
             },
             {
                 id: 'darion',
-                name: 'Wuling Darion',
+                name: 'Wuling Darion PHEV',
                 category: 'SUV',
-                priceNumber: 320000000,
-                priceDisplay: 'Hubungi Mery*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/8343422449682950767_0',
+                priceNumber: 454000000,
+                priceDisplay: 'Rp 454.000.000 - Rp 504.000.000',
+                image: 'images/darion.png',
                 desc: 'SUV crossover modern berperforma tinggi dengan kenyamanan kabin superior serta daya jelajah luas.',
+                variants: [
+                    { name: 'Darion PHEV CE 540', priceNumber: 454000000, priceDisplay: 'Rp 454.000.000' },
+                    { name: 'Darion PHEV EX 540', priceNumber: 504000000, priceDisplay: 'Rp 504.000.000' }
+                ],
+                specs: [
+                    'Performa: High-torque Engine System',
+                    'Suspensi: Nyaman untuk Berbagai Medan',
+                    'Desain: Tangguh & Aerodinamis',
+                    'Hiburan: Advanced Entertainment Touchscreen'
+                ]
+            },
+            {
+                id: 'eksion-phev',
+                name: 'Wuling Eksion PHEV',
+                category: 'SUV',
+                priceNumber: 464000000,
+                priceDisplay: 'Rp 464.000.000 - Rp 514.000.000',
+                image: 'images/darion.png',
+                desc: 'SUV crossover modern berperforma tinggi dengan kenyamanan kabin superior serta daya jelajah luas.',
+                variants: [
+                    { name: 'Eksion PHEV CE', priceNumber: 464000000, priceDisplay: 'Rp 464.000.000' },
+                    { name: 'Eksion PHEV EX', priceNumber: 514000000, priceDisplay: 'Rp 514.000.000' }
+                ],
                 specs: [
                     'Performa: High-torque Engine System',
                     'Suspensi: Nyaman untuk Berbagai Medan',
@@ -417,10 +489,16 @@
                 id: 'cortez',
                 name: 'Wuling New Cortez',
                 category: 'MPV',
-                priceNumber: 263000000,
-                priceDisplay: 'Mulai Rp 263 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/12729493108764636506_0',
+                priceNumber: 269000000,
+                priceDisplay: 'Rp 269.000.000 - Rp 352.000.000',
+                image: 'images/cortez.png',
                 desc: 'Innovating Comfort Zone. Executive MPV dengan kenyamanan kelas atas. Suspensi independen dan Captain Seat yang mewah.',
+                variants: [
+                    { name: 'Cortez S Lux 6 MT - 8 Seat', priceNumber: 269500000, priceDisplay: 'Rp 269.500.000' },
+                    { name: 'Cortez S Lux + CVT - 7 Seat', priceNumber: 295200000, priceDisplay: 'Rp 295.200.000' },
+		    { name: 'New Cortez CE + Lux + CVT', priceNumber: 314300000, priceDisplay: 'Rp 314.300.000' },
+	            { name: 'New Cortez EX Lux + CVT', priceNumber: 352650000, priceDisplay: 'Rp 352.650.000' }
+                ],
                 specs: [
                     'Mesin: 1.5L Turbocharged (140 HP)',
                     'Kapasitas: 7 Seater dengan Captain Seat',
@@ -430,12 +508,17 @@
             },
             {
                 id: 'confero',
-                name: 'Wuling New Confero & S',
+                name: 'Wuling Confero',
                 category: 'MPV',
-                priceNumber: 188300000,
-                priceDisplay: 'Rp 188,3 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/6899045180035295787_0',
+                priceNumber: 199500000,
+                priceDisplay: 'Rp 199.500.000 - Rp 236.850.000',
+                image: 'images/confero.png',
                 desc: 'The Real Spacious Family MPV. Mobil keluarga sejati yang super lega, tangguh untuk tanjakan, dan kabin senyap.',
+                variants: [
+                    { name: 'Conferno 1.5 SMT STD DB', priceNumber: 199500000, priceDisplay: 'Rp 199.500.000' },
+                    { name: 'Conferno 1.5 C Lux SMT', priceNumber: 221700000, priceDisplay: 'Rp 221.700.000' },
+		    { name: 'Conferno 1.5 L Lux + SMT', priceNumber: 236850000, priceDisplay: 'Rp 236.850.000' }
+                ],
                 specs: [
                     'Mesin: 1.5L Double Blower (Manual)',
                     'Kapasitas: 8 Seater Extra Lega',
@@ -445,12 +528,15 @@
             },
             {
                 id: 'formo-s',
-                name: 'Wuling Formo & S',
+                name: 'Wuling Formo S',
                 category: 'MPV',
-                priceNumber: 150000000,
-                priceDisplay: 'Hubungi Mery*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/6899045180035295787_0',
+                priceNumber: 183600000,
+                priceDisplay: 'Rp 183.600.000',
+                image: 'images/formo-s.png',
                 desc: 'Minibus serbaguna yang handal untuk kendaraan keluarga fungsional maupun armada operasional usaha.',
+                variants: [
+                    { name: 'Formo S - 8 Seat', priceNumber: 183600000, priceDisplay: 'Rp 183.600.000' }
+                ],
                 specs: [
                     'Kapasitas: Pilihan Konfigurasi Kursi Luas',
                     'Mesin: Efisien & Perawatan Mudah',
@@ -462,10 +548,14 @@
                 id: 'formo-max',
                 name: 'Wuling Formo Max',
                 category: 'Commercial',
-                priceNumber: 150000000,
-                priceDisplay: 'Mulai Rp 150 Juta*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/4613152067324548555_0',
+                priceNumber: 177000000,
+                priceDisplay: 'Rp 177.000.000 - Rp 185.000.000',
+                image: 'images/formo-max.png',
                 desc: 'Enteng Bikin Untung. Kendaraan niaga pick-up dengan bak terluas di kelasnya, EPS, dan AC dingin bawaan pabrik.',
+                variants: [
+                    { name: 'Formo Max - Non AC', priceNumber: 177000000, priceDisplay: 'Rp 177.000.000' },
+                    { name: 'Formo Max - AC', priceNumber: 185000000, priceDisplay: 'Rp 185.000.000' }
+                ],
                 specs: [
                     'Kargo Bak: Buka 3 Sisi (3-Way)',
                     'Dimensi Kargo: P 2.695 mm x L 1.725 mm',
@@ -477,10 +567,16 @@
                 id: 'mitra-ev',
                 name: 'Wuling Mitra EV',
                 category: 'Commercial',
-                priceNumber: 200000000,
-                priceDisplay: 'Hubungi Mery*',
-                image: 'http://googleusercontent.com/image_collection/image_retrieval/4613152067324548555_0',
+                priceNumber: 341000000,
+                priceDisplay: 'Rp 341.000.000 - Rp 391.500.000',
+                image: 'images/mitra-ev.png',
                 desc: 'Kendaraan niaga ramah lingkungan tipe blind van & minibus listrik untuk logistik perkotaan tanpa emisi.',
+                variants: [
+                    { name: 'Mitra EV BV 300', priceNumber: 341000000, priceDisplay: 'Rp 341.000.000' },
+                    { name: 'Mitra EV BV 400', priceNumber: 371000000, priceDisplay: 'Rp 371.000.000' },
+		    { name: 'Mitra EV MB 300', priceNumber: 361000000, priceDisplay: 'Rp 361.000.000' },
+                    { name: 'Mitra EV MB 400', priceNumber: 391500000, priceDisplay: 'Rp 391.500.000' }
+                ],
                 specs: [
                     'Jenis: Blind Van / Minibus Niaga',
                     'Penggerak: 100% Listrik (EV)',
@@ -491,6 +587,7 @@
         ];
 
         let activeCarPrice = 0;
+        let currentCarVariants = [];
 
         function renderCars(category = 'All') {
             const grid = document.getElementById('carGrid');
@@ -545,26 +642,70 @@
             const car = carData.find(c => c.id === id);
             if (!car) return;
 
-            activeCarPrice = car.priceNumber;
-
             document.getElementById('modalTitle').textContent = car.name;
             document.getElementById('modalImg').src = car.image;
             document.getElementById('modalDesc').textContent = car.desc;
-            document.getElementById('simOtr').value = car.priceDisplay;
 
+            // Render Pilihan Tipe / Varian
+            const variantBox = document.getElementById('variantContainer');
+            variantBox.innerHTML = '';
+
+            if (car.variants && car.variants.length > 0) {
+                currentCarVariants = car.variants;
+                variantBox.classList.remove('hidden');
+
+                car.variants.forEach((v, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `variant-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition flex-shrink-0 ${
+                        index === 0 
+                        ? 'bg-wuling-primary text-white border-wuling-primary shadow-sm' 
+                        : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+                    }`;
+                    btn.textContent = `${v.name} (${v.priceDisplay})`;
+                    btn.onclick = () => selectVariant(index);
+                    variantBox.appendChild(btn);
+                });
+
+                selectVariant(0);
+            } else {
+                currentCarVariants = [];
+                variantBox.classList.add('hidden');
+                activeCarPrice = car.priceNumber;
+                document.getElementById('simOtr').value = car.priceDisplay;
+                calculateCredit();
+            }
+
+            // Render Spesifikasi
             const specsList = document.getElementById('modalSpecs');
             specsList.innerHTML = '';
             car.specs.forEach(spec => {
                 specsList.innerHTML += `<li class="flex items-start gap-3"><i class="fas fa-check text-wuling-accent mt-1 text-xs"></i> <span>${spec}</span></li>`;
             });
 
-            calculateCredit();
-
             const waMsg = `Halo Mery, saya tertarik dan ingin konsultasi simulasi kredit untuk unit Wuling ${car.name}.`;
             document.getElementById('modalWaBtn').href = `https://wa.me/6285707382270?text=${encodeURIComponent(waMsg)}`;
 
             document.getElementById('specModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden'; 
+        }
+
+        function selectVariant(index) {
+            const selected = currentCarVariants[index];
+            if (!selected) return;
+
+            activeCarPrice = selected.priceNumber;
+            document.getElementById('simOtr').value = selected.priceDisplay;
+
+            const buttons = document.querySelectorAll('.variant-btn');
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.className = 'variant-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition flex-shrink-0 bg-wuling-primary text-white border-wuling-primary shadow-sm';
+                } else {
+                    btn.className = 'variant-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition flex-shrink-0 bg-white text-gray-700 border-gray-300 hover:bg-gray-100';
+                }
+            });
+
+            calculateCredit();
         }
 
         function calculateCredit() {
